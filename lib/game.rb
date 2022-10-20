@@ -3,7 +3,7 @@ require_relative 'board'
 require_relative 'boardcase'
 
 class Game
-  attr_accessor :arr_player, :case_choice, :player_1, :player_2
+  attr_accessor :arr_player, :case_choice, :player_1, :player_2 #4 attrib
   @@game_number = 0
   @@play1_wins = 0
   @@play2_wins = 0
@@ -37,7 +37,7 @@ class Game
     @@game_number += 1
     tour = 1
     @show.show_board(@board)
-    puts " ", "La partie #{@@game_number} commence, youhou !!"
+    puts " ", "La partie #{@@game_number} commence, prepare yourself"
     while tour <= 9
       i = tour % 2
       puts " " 
@@ -84,7 +84,7 @@ class Game
 
 def game_end
  
-  puts " Après une longue session vous vous êtes affronté durant #{@@game_number} parties et le score final est de :", " "
+  puts " GAME OVER #{@@game_number} partie(s); score final :", " "
   print "#{@player_1.name} : #{@@play1_wins}".colorize(:blue)
   print " - "
   puts "#{@player_2.name} : #{@@play2_wins}".colorize(:red)

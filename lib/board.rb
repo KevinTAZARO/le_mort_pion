@@ -59,7 +59,7 @@ class Board
     choices = Array.new
     
     @choice_arr.each { |el| choices << el.name }
-    answer = prompt.select('Choisis la case dans la liste ci-dessous?', choices, help: '(Utilise les flèches pour choisir ta réponse et appuie sur Entrée)', per_page: 9)
+    answer = prompt.select('Choisis la case dans la liste ci-dessous?', choices, help: '(Utilise les flèches pour choisir ta réponse et appuie sur Entrée)')
     return answer
   end
 
